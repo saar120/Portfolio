@@ -338,9 +338,10 @@ body {
   text-align: center;
   min-height: 15rem;
 }
-.info > form {
+.info > form > input {
   border: var(--secondery-color) 2px solid;
   border-radius: 10px;
+  padding: 1rem;
 }
 .info > form,
 h3 {
