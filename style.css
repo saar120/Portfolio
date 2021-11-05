@@ -75,7 +75,20 @@ body {
   padding-top: 1rem;
   font-weight: 300;
 }
-
+.header a {
+  margin-left: 30%;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0.3rem;
+  border: var(--secondery-color) solid 2px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.header a:hover {
+  color: var(--background-color);
+  background-color: var(--secondery-color);
+}
 /* profile image setup */
 .imgcontainer {
   padding: var(--pad-1);
@@ -86,7 +99,7 @@ body {
   border-radius: 50%;
   justify-self: center;
   align-self: center;
-  background: url(/assets/img/1618987285675.jpeg);
+  background: url(/assets/img/WhatsApp\ Image\ 2021-11-04\ at\ 7.28.51\ PM.jpeg);
   background-size: contain;
   background-repeat: no-repeat;
   box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.65);
@@ -107,6 +120,7 @@ body {
 }
 
 .social.showcase i:hover {
+  transition: 0.3s ease;
   transform: scale(1.2);
 }
 
@@ -114,4 +128,55 @@ body {
 .aboutpage {
   height: 100vh;
   width: 100vw;
+  display: grid;
+  grid-template-areas:
+    "head head "
+    "article tools "
+    "article tools ";
+  grid-template-rows: 1fr 4fr;
+  grid-template-columns: 1fr 2fr;
+}
+
+.headcontianer {
+  border: red 2px solid;
+  grid-area: head;
+  background-color: var(--secondery-color);
+  max-height: 20vh;
+}
+.headcontianer h1 {
+  color: var(--background-color);
+  text-align: center;
+  font-size: 7vw;
+  min-height: 20vh;
+  background-color: transparent;
+}
+
+.main {
+  border: red 2px solid;
+  grid-area: article;
+}
+
+.tools.showcase {
+  border: red 2px solid;
+  grid-area: tools;
+}
+
+.outer {
+  position: relative;
+  margin-left: 3rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  height: 1.5rem;
+  width: 18rem;
+  border-radius: 10px;
+  background-color: darkgray;
+}
+.inner {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.2rem;
+  height: 1rem;
+  width: 15rem;
+  border-radius: 10px;
+  color: #145da0;
 }
