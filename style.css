@@ -3,10 +3,13 @@
   --primary-color: #145da0;
   --secondery-color: #b1d4e0;
   --background-color: #0c2d48;
-  --overlay-color: rgba(0, 0, 0, 0.75);
+  --overlay-color: rgba(0, 0, 0, 0.4);
   --pad-1: 2rem;
 }
-
+/* test */
+.test {
+  border: red solid 2px;
+}
 * {
   margin: 0;
   padding: 0;
@@ -131,14 +134,13 @@ body {
   display: grid;
   grid-template-areas:
     "head head "
-    "article tools "
-    "article tools ";
-  grid-template-rows: 1fr 4fr;
-  grid-template-columns: 1fr 2fr;
+    "article article"
+    "tools tools ";
+  grid-template-rows: 1fr 4fr 4fr;
+  grid-template-columns: 1fr;
 }
 
-.headcontianer {
-  border: red 2px solid;
+.aboutpage > .headcontianer {
   grid-area: head;
   background-color: var(--secondery-color);
   max-height: 20vh;
@@ -146,21 +148,37 @@ body {
 .headcontianer h1 {
   color: var(--background-color);
   text-align: center;
-  font-size: 7vw;
-  min-height: 20vh;
+  font-size: 5vw;
+  min-height: 10vh;
   background-color: transparent;
 }
 
 .main {
-  border: red 2px solid;
+  justify-self: center;
+  align-self: center;
+  width: 60vw;
+  padding: var(--pad-1);
   grid-area: article;
 }
 
 .tools.showcase {
-  border: red 2px solid;
+  justify-self: center;
+  align-self: center;
+  width: 30rem;
   grid-area: tools;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(6 1fr);
+  padding: var(--pad-1);
 }
 
+.tools div {
+  /* border: red 2px solid; */
+  justify-self: right;
+  align-self: center;
+}
+/* precentege bar */
 .outer {
   position: relative;
   margin-left: 3rem;
@@ -169,14 +187,163 @@ body {
   height: 1.5rem;
   width: 18rem;
   border-radius: 10px;
-  background-color: darkgray;
+  background-color: var(--secondery-color);
 }
 .inner {
-  position: absolute;
-  top: 0.3rem;
+  position: relative;
+  top: 0.25rem;
   left: 0.2rem;
   height: 1rem;
   width: 15rem;
   border-radius: 10px;
   color: #145da0;
+}
+
+.inner::after {
+  font-size: 0.8rem;
+  color: var(--background-color);
+  position: absolute;
+  content: "";
+  left: 15.2rem;
+}
+
+.inner.js {
+  width: 15rem;
+}
+.inner.js::after {
+  content: "90%";
+  left: 15.2rem;
+}
+.inner.py {
+  width: 14rem;
+}
+.inner.py::after {
+  content: "80%";
+  left: 14.2rem;
+}
+.inner.html {
+  width: 15rem;
+}
+.inner.html::after {
+  content: "90%";
+  left: 15.2rem;
+}
+.inner.css {
+  width: 15.4rem;
+}
+.inner.css::after {
+  content: "95%";
+  left: 15.6rem;
+}
+.inner.react {
+  width: 13rem;
+}
+.inner.react::after {
+  content: "75%";
+  left: 13.2rem;
+}
+.inner.node {
+  width: 15rem;
+}
+.inner.node::after {
+  content: "90%";
+  left: 15.2rem;
+}
+
+/* projects page */
+.projectspage {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-areas:
+    "head"
+    "projects";
+  grid-template-rows: 1fr 8fr;
+  grid-template-columns: 1fr;
+}
+
+.projectspage > .headcontainer {
+  grid-area: head;
+  background-color: var(--secondery-color);
+  max-height: 20vh;
+}
+.headcontainer h1 {
+  color: var(--background-color);
+  text-align: center;
+  font-size: 5vw;
+  min-height: 10vh;
+  background-color: transparent;
+}
+.projectspage .projects {
+  grid-area: projects;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.project {
+  text-align: center;
+  color: var(--background-color);
+  position: relative;
+  height: 13rem;
+  width: 15rem;
+  background-color: var(--secondery-color);
+  border-radius: 10px;
+  justify-self: center;
+  align-self: center;
+}
+.project:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+
+.project::before {
+  background-color: var(--overlay-color);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project::after {
+  color: var(--secondery-color);
+  content: "Project name";
+  position: absolute;
+  right: 4rem;
+  bottom: -2rem;
+}
+
+/* contact page */
+.contactpage {
+  width: 100vw;
+}
+.contactpage > .headcontainer {
+  grid-area: head;
+  background-color: var(--secondery-color);
+  max-height: 20vh;
+}
+.headcontainer h1 {
+  color: var(--background-color);
+  text-align: center;
+  font-size: 5vw;
+  min-height: 10vh;
+  background-color: transparent;
+}
+
+.info {
+  padding: var(--pad-1);
+  text-align: center;
+  min-height: 15rem;
+}
+.info > form {
+  border: var(--secondery-color) 2px solid;
+  border-radius: 10px;
+}
+.info > form,
+h3 {
+  margin: var(--pad-1);
+  padding: 1rem 1rem;
 }
