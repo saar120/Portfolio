@@ -17,6 +17,15 @@
   color: var(--secondery-color);
   background-color: var(--background-color);
 }
+/* smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  scroll-snap-type: y mandatory;
+}
 /* remove scroll bar */
 body::-webkit-scrollbar {
   display: none;
