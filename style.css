@@ -438,23 +438,26 @@ h3 {
     margin-left: 0;
   }
   .projectspage {
+    grid-template-rows: unset;
     width: 100vw;
-    height: none;
+    height: unset;
   }
-  .headcontainer {
+  .projectspage > .headcontainer {
+    background-color: transparent;
     min-height: unset;
   }
-  .headcontainer h1 {
+  .projectspage > .headcontainer h1 {
+    background-color: var(--secondery-color);
     min-height: unset;
     text-align: center;
     font-size: 2rem;
   }
   .projectspage > .projects {
-    /* display: none; */
     margin-top: 2rem;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
     row-gap: 3rem;
+    margin: 2rem 0 4rem 0;
   }
 
   .contactpage {
@@ -462,10 +465,18 @@ h3 {
     height: unset;
   }
   .contactpage > .headcontainer {
-    border: solid red 2px;
+    background-color: transparent;
+    min-height: unset;
+  }
+  .contactpage > .headcontainer h1 {
+    font-size: 2rem;
+    background-color: var(--secondery-color);
+    min-height: unset;
   }
   .info {
-    border: red 2px solid;
     min-height: unset;
+  }
+  .info > form > .input {
+    margin-bottom: 1rem;
   }
 }
