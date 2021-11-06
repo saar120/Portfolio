@@ -148,11 +148,11 @@ body {
   grid-template-columns: 1fr;
 }
 
-.aboutpage > .headcontianer {
+.aboutpage > .headcontainer {
   grid-area: head;
   max-height: 20vh;
 }
-.headcontianer h1 {
+.headcontainer h1 {
   color: var(--background-color);
   text-align: center;
   font-size: 5vw;
@@ -414,10 +414,11 @@ h3 {
     grid-template-rows: none;
     row-gap: 1rem;
   }
-  .headcontianer {
+  .headcontainer {
+    background-color: transparent;
     min-height: unset;
   }
-  .headcontianer h1 {
+  .headcontainer h1 {
     background-color: var(--secondery-color);
     font-size: 2rem;
     min-height: unset;
@@ -442,16 +443,6 @@ h3 {
     width: 100vw;
     height: unset;
   }
-  .projectspage > .headcontainer {
-    background-color: transparent;
-    min-height: unset;
-  }
-  .projectspage > .headcontainer h1 {
-    background-color: var(--secondery-color);
-    min-height: unset;
-    text-align: center;
-    font-size: 2rem;
-  }
   .projectspage > .projects {
     margin-top: 2rem;
     grid-template-columns: 1fr;
@@ -464,15 +455,7 @@ h3 {
     width: 100vw;
     height: unset;
   }
-  .contactpage > .headcontainer {
-    background-color: transparent;
-    min-height: unset;
-  }
-  .contactpage > .headcontainer h1 {
-    font-size: 2rem;
-    background-color: var(--secondery-color);
-    min-height: unset;
-  }
+
   .info {
     min-height: unset;
   }
