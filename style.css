@@ -30,6 +30,12 @@ html,
 body {
   scroll-snap-type: y mandatory;
 }
+.aboutpage,
+.contactpage,
+.landpage,
+.projectspage {
+  scroll-snap-align: start;
+}
 /* remove scroll bar */
 body::-webkit-scrollbar {
   display: none;
@@ -371,7 +377,10 @@ input::placeholder {
   * {
     -webkit-overflow-scrolling: touch;
   }
-
+  html,
+  body {
+    scroll-snap-type: y proximity;
+  }
   .landpage {
     height: none;
     display: grid;
