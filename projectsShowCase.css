@@ -6,5 +6,5 @@
   background-position: center;
 }
 .project.p1::after {
-  content: "Tesla Mockup";
+  content: "Tesla Mockup ";
 }
