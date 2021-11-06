@@ -28,44 +28,44 @@
 }
 
 .inner.js {
-  width: 2rem;
+  width: 15rem;
 }
 .inner.js::after {
   content: "90%";
-  left: 2.2rem;
+  left: 15.2rem;
 }
 .inner.py {
-  width: 3.5rem;
+  width: 14rem;
 }
 .inner.py::after {
   content: "80%";
-  left: 3.7rem;
+  left: 14.2rem;
 }
 .inner.html {
-  width: 2rem;
+  width: 15rem;
 }
 .inner.html::after {
   content: "90%";
-  left: 2.2rem;
+  left: 15.2rem;
 }
 .inner.css {
-  width: 1.4rem;
+  width: 15.4rem;
 }
 .inner.css::after {
   content: "95%";
-  left: 1.6rem;
+  left: 15.6rem;
 }
 .inner.react {
-  width: 4rem;
+  width: 13rem;
 }
 .inner.react::after {
   content: "75%";
-  left: 4.2rem;
+  left: 13.2rem;
 }
 .inner.node {
-  width: 2rem;
+  width: 15rem;
 }
 .inner.node::after {
   content: "90%";
-  left: 2.2rem;
+  left: 15.2rem;
 }

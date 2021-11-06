@@ -76,8 +76,42 @@ body {
   justify-content: space-around;
   text-transform: uppercase;
 }
+/* navbar transiton */
 .navbar div {
+  align-self: center;
+  padding: 1rem;
+  overflow: hidden;
+  position: relative;
   cursor: pointer;
+}
+.navbar div::before {
+  content: "";
+  position: absolute;
+  border-top: 3px solid;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 1px;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+.navbar div::after {
+  content: "";
+  position: absolute;
+  border-bottom: 3px solid;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 1px;
+  transform: translateX(100%);
+  transition: all 0.6s;
+}
+
+.navbar div:hover::after {
+  transform: translateX(0);
+}
+.navbar div:hover::before {
+  transform: translateX(0);
 }
 
 /* header setup */
