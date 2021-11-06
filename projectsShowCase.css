@@ -1,0 +1,10 @@
+.p1 {
+  z-index: 1;
+  background-image: url(/assets/img/tesla-mock.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.project.p1::after {
+  content: "Tesla Mockup";
+}

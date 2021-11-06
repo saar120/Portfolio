@@ -257,15 +257,19 @@ body {
 }
 
 .project {
+  cursor: pointer;
   text-align: center;
   color: var(--background-color);
   position: relative;
   height: 13rem;
   width: 15rem;
   background-color: var(--secondery-color);
+  border: 2px solid var(--secondery-color);
   border-radius: 10px;
   justify-self: center;
   align-self: center;
+  -webkit-box-shadow: 0px 0px 25px -6px #000000;
+  box-shadow: 0px 0px 25px -6px #000000;
 }
 .project:hover {
   transform: scale(1.1);
@@ -275,6 +279,7 @@ body {
 .project::before {
   background-color: var(--overlay-color);
   content: "";
+  z-index: 0;
   position: absolute;
   top: 0;
   left: 0;
