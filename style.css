@@ -150,7 +150,6 @@ body {
 
 .aboutpage > .headcontianer {
   grid-area: head;
-  background-color: var(--secondery-color);
   max-height: 20vh;
 }
 .headcontianer h1 {
@@ -158,7 +157,7 @@ body {
   text-align: center;
   font-size: 5vw;
   min-height: 10vh;
-  background-color: transparent;
+  background-color: var(--secondery-color);
 }
 
 .main {
@@ -390,7 +389,6 @@ h3 {
     padding-left: 1rem;
   }
   .header h1 {
-    /* border: red solid 2px; */
     font-size: 2rem;
   }
   .header h3 {
@@ -407,28 +405,67 @@ h3 {
   }
 
   .aboutpage {
+    height: 100%;
     max-width: 100vw;
     grid-template-areas:
       "head"
       "article"
       "tools";
+    grid-template-rows: none;
+    row-gap: 1rem;
+  }
+  .headcontianer {
+    min-height: unset;
+  }
+  .headcontianer h1 {
+    background-color: var(--secondery-color);
+    font-size: 2rem;
+    min-height: unset;
+  }
+  .tools.showcase {
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
+    padding: 0 0 3rem 0;
+  }
+
+  .tools.showcase div {
+    justify-self: center;
+    align-self: center;
+  }
+  .outer {
+    margin-left: 0;
+  }
+  .projectspage {
+    width: 100vw;
     height: none;
   }
   .headcontainer {
-    width: 100vw;
+    min-height: unset;
   }
-  .headcontianer h1 {
-    width: 100vw;
-    border: red solid 2px;
+  .headcontainer h1 {
+    min-height: unset;
+    text-align: center;
     font-size: 2rem;
   }
-
-  .projectspage {
-    width: 100vw;
+  .projectspage > .projects {
+    /* display: none; */
+    margin-top: 2rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 3rem;
   }
 
-  .inner,
-  .outer {
-    display: none;
+  .contactpage {
+    width: 100vw;
+    height: unset;
+  }
+  .contactpage > .headcontainer {
+    border: solid red 2px;
+  }
+  .info {
+    border: red 2px solid;
+    min-height: unset;
   }
 }
