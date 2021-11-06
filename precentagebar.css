@@ -69,3 +69,9 @@
   content: "90%";
   left: 15.2rem;
 }
+
+@media (max-width: 600px) {
+  .outer {
+    margin-left: 0;
+  }
+}
