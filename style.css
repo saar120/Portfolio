@@ -310,10 +310,10 @@ body {
   align-self: center;
   -webkit-box-shadow: 0px 0px 25px -6px #000000;
   box-shadow: 0px 0px 25px -6px #000000;
+  transition: 0.3s ease;
 }
 .project:hover {
   transform: scale(1.1);
-  transition: 0.3s ease;
 }
 
 .project::before {
@@ -487,5 +487,14 @@ input::placeholder {
   }
   input:focus {
     outline: none;
+  }
+}
+
+@media (max-height: 720px) {
+  .aboutpage {
+    height: auto;
+  }
+  .projectspage {
+    height: auto;
   }
 }
